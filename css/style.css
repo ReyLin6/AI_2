@@ -1,0 +1,155 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+    outline: 1px solid #CE0000;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+}
+.container{
+    background: #000;
+    color: #fff;
+    max-width: 1296px;/*響應式*/
+    margin: 0 auto;
+    font-family: 'Noto Sans TC', sans-serif;     
+}
+.logo, .function{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box{
+    /*display: block;
+    align-items: center;*/
+    text-decoration: none;
+    color: #fff;
+    width: 80px;  
+}
+.function a{
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+}
+.function li{
+    margin-left: 20px;
+}
+.frame{
+    width: 170px;/*設160後+了線條 裡面的box文字會往下掉一個*/
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-bottom: 124px;
+}
+.logo2{
+    display: flex;
+    justify-content: flex-end;    
+    
+}
+.logo2 img{
+    width: 180px;
+}
+
+
+/*字型調整*/
+.f_l{
+    font-size: 120px;
+}
+.f_m{
+    font-size: 20px;
+}
+.f_s{
+    font-size: 16px;
+}
+.fwb_9{
+    font-weight: 900;
+
+}
+.fwb_7{
+    font-weight: 700;/*不加px*/
+}
+
+.fwb{
+    font-weight: bold;
+}
+.lh_l{
+    line-height: 160%;
+
+}
+.lh_m{
+    line-height: 120%;
+}
+/*log調整*/
+.i_w1{
+    max-width: 188px;
+    /*height: 40px;*/
+}
+/*margin padding微調*/
+.p_20{
+    padding: 20px 0;
+}
+.p_010{
+    padding: 0 10px;
+}
+.p_230{
+    padding: 20px 30px;
+}
+.m_20{
+    margin: 20px;
+}
+.m_bt40{
+    margin: 40px 0;
+}
+
+.bd_bt{
+    border-bottom: 1px solid #fff;
+
+}
