@@ -3,153 +3,405 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 * {
     outline: 1px solid #CE0000;
 }
-*, *::before, *::after {
+
+*,
+*::before,*::after {
     box-sizing: border-box;
 }
-body{
+
+body {
     background: #000;
 }
-.container{
+
+.container {
     background: #000;
     color: #fff;
-    max-width: 1296px;/*響應式*/
+    max-width: 1296px;
+    /*響應式*/
     margin: 0 auto;
-    font-family: 'Noto Sans TC', sans-serif;     
+    font-family: 'Noto Sans TC', sans-serif;
 }
-.logo, .function{
+
+.logo, .function {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;/*不要設 3個表格會不能對齊*/
 }
-.box{
-    /*display: block;
-    align-items: center;*/
-    text-decoration: none;
-    color: #fff;
-    width: 80px;  
-}
-.function a{
+
+.function a {
     text-decoration: none;
     color: #fff;
     align-items: center;
 }
-.function li{
+
+.function li {
     margin-left: 20px;
 }
-.frame{
-    width: 170px;/*設160後+了線條 裡面的box文字會往下掉一個*/
+
+.frame {
+    width: 160px;
+    color: #fff;
     display: block;
+    text-align: center;
+    text-decoration: none;
+    /*width: 80px;*/
     border: 1px solid #fff;
-    border-radius: 20px;
+    border-radius: 16px;
     margin-bottom: 124px;
+
 }
-.logo2{
+.frame:hover{
+    background: #fff;
+    color: #000;
+}
+
+.grass {
     display: flex;
-    justify-content: flex-end;    
-    
-}
-.logo2 img{
-    width: 180px;
+    justify-content: flex-end;
 }
 
+.grass img {
+    max-width: 540px;
+}
 
-/*字型調整*/
-.f_l{
-    font-size: 120px;
-}
-.f_m{
-    font-size: 20px;
-}
-.f_s{
-    font-size: 16px;
-}
-.fwb_9{
+.sever {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     font-weight: 900;
 
 }
-.fwb_7{
-    font-weight: 700;/*不加px*/
+.sever h2{
+    width: 414px;
+    font-size: 32px;
 }
-
-.fwb{
-    font-weight: bold;
-}
-.lh_l{
-    line-height: 160%;
+.sever p{
+    width: 856px;
+    font-size: 48px;
 
 }
-.lh_m{
+
+.sever_features{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.features {
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #525252;
+    border-radius: 15px;
+    padding: 40px;
+    
+}
+
+.features span {
+    /*width: 30px;*/
+    font-size: 63px;
+
+}
+.ma,.partner h2{
+    font-size: 32px;
+    margin: 20px 0;
+    font-weight: 900;
     line-height: 120%;
 }
-/*log調整*/
-.i_w1{
+.ma p{
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+}
+.partner h2{
+    margin: 160px 0 80px;
+    
+}
+/*.wob{
+    white-space: pre-wrap
+
+}*/
+
+/*.box {
+    /*display: block;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    width: 80px;
+}
+*/
+
+
+
+
+
+/*寬度調整*/
+/*.w_l {
+    width: 856px;
+}*/
+
+/*.w_m {
+    width: 414px;
+}*/
+
+.w_ml {
+    width: 422px;
+}
+/*.w {
+    width: 32%;
+}*/
+
+
+/*字型調整*/
+.f_l {
+    font-size: 120px;
+}
+
+.f_ml {
+    font-size: 48px;
+}
+
+/*.f_mm {
+    font-size: 32px;
+}*/
+
+.f_m {
+    font-size: 20px;
+}
+
+.f_s {
+    font-size: 16px;
+}
+
+/*粗體*/
+.fwb_9 {
+    font-weight: 900;
+}
+
+.fwb_7 {
+    font-weight: 700;
+    /*不加px*/
+}
+
+/*.fwb_4 {
+    font-weight: 400;
+}*/
+
+.fwb {
+    font-weight: bold;
+}
+
+/*行距*/
+.lh_l {
+    line-height: 160%;
+}
+
+.lh_ms {
+    line-height: 150%;
+}
+
+.lh_m {
+    line-height: 120%;
+}
+
+/*logo調整*/
+.i_w1 {
     max-width: 188px;
     /*height: 40px;*/
 }
+
 /*margin padding微調*/
-.p_20{
+.p_20 {
     padding: 20px 0;
 }
-.p_010{
+
+/*.p_40 {
+    padding: 40px;
+}*/
+
+.p_010 {
     padding: 0 10px;
 }
-.p_230{
+
+.p_230 {
     padding: 20px 30px;
 }
-.m_20{
+.p_b80 {
+    padding-bottom: 80px;
+}
+
+.p_r24 {
+    padding-right: 30px;
+}
+
+.m_20 {
     margin: 20px;
 }
-.m_bt40{
+
+.m_bt40 {
     margin: 40px 0;
 }
 
-.bd_bt{
+.m_bt20 {
+    margin: 20px 0;
+}
+
+.m_b40 {
+    margin-bottom: 40px;
+}
+.m_b160 {
+    margin-bottom: 160px;
+}
+
+.m_t46 {
+    margin-top: 46px;
+}
+
+.ma {
+    margin-bottom: auto;
+}
+
+
+
+/*下底線*/
+.bd_bt {
     border-bottom: 1px solid #fff;
 
 }
+
