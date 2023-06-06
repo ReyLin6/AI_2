@@ -1,0 +1,127 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+    outline: 1px solid #CE0000;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.container{
+    background: #fff;
+}
+.tools{
+    width: 1296px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Noto Sans TC', sans-serif;
+    gap: 24px;
+}
+.card{
+    /*width: 30%;*/
+    width: 416px;
+    border-radius: 10px;/*圓角度數設定*/
+    border: 1px solid #F2F2F2;
+    /*margin-bottom: 24px;*/
+    overflow: hidden;/*自動隱藏超出的文字或圖片*/
+    display: flex;
+    flex-direction: column;/*這邊要用df才能讓magin:auto出現效果*/
+}
+.s{
+    /*width: 416px;
+    height: 312px;*/
+    max-width: 100%;/*改100%就不用調整高寬*/
+}
+.card h3{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 120%;
+}
+.card p{
+    font-size: 14px;
+    line-height: 150%;
+    
+}
+.item, .item2{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-top: 1px solid #F2F2F2;
+    /*padding: 20px 32px;*/
+}
+.item p,span, .item2 p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%; 
+}
+.item p{
+    font-weight: bold;
+}
+/*.icon{
+    width: 100%;    
+}
+從img>改用material*/
+.material-icons{
+    text-decoration: none;
+    color: #000;
+}
+/*----細微調整----*/
+.ma_b{
+    margin-bottom: 12px;
+}
+.pa_L{
+    padding: 20px 32px;/*上下,左右*/
+}
+.ma_a{
+    margin-bottom: auto;/*設定後會將item以後的往下推,變成像P段落有兩行字數的同等高*/
+}
+.c_g{
+  color: #525252;
+}

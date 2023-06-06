@@ -3,143 +3,55 @@
    License: none (public domain)
 */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-
 body {
-    line-height: 1;
+	line-height: 1;
 }
-
-ol,
-ul {
-    list-style: none;
+ol, ul {
+	list-style: none;
 }
-
-blockquote,
-q {
-    quotes: none;
+blockquote, q {
+	quotes: none;
 }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
-
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 * {
     outline: 1px solid #CE0000;
 }
 
-*,
-*::before,*::after {
+*,*::before,*::after {
     box-sizing: border-box;
 }
 
@@ -150,16 +62,28 @@ body {
 .container {
     background: #000;
     color: #fff;
-    max-width: 1296px;
-    /*響應式*/
+    max-width: 1296px;/*響應式*/
     margin: 0 auto;
     font-family: 'Noto Sans TC', sans-serif;
 }
-
-.logo, .function {
+.logo {
     display: flex;
     justify-content: space-between;
-    align-items: center;/*不要設 3個表格會不能對齊*/
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #fff;
+}
+.logo img {
+    max-width: 188px;
+}
+
+.function {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;/*sever不要設 3個表格會不能對齊*/
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
 }
 
 .function a {
@@ -171,8 +95,15 @@ body {
 .function li {
     margin-left: 20px;
 }
+.slogan {
+    font-size: 120px;
+    font-weight: bold;
+    line-height: 120%;
+    margin: 40px 0;
 
-.frame {
+}
+
+.button {
     width: 160px;
     color: #fff;
     display: block;
@@ -182,9 +113,13 @@ body {
     border: 1px solid #fff;
     border-radius: 16px;
     margin-bottom: 124px;
-
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 120%;
+    
 }
-.frame:hover{
+.button:hover{
     background: #fff;
     color: #000;
 }
@@ -203,56 +138,152 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     font-weight: 900;
-
 }
 .sever h2{
-    width: 414px;
+    width: 32%;
+    /*width: 414px;*/
     font-size: 32px;
+    line-height: 120%;    
+    /*flex: auto;*/
 }
 .sever p{
-    width: 856px;
+    width: 66%;
+    /*width: 856px;*/
     font-size: 48px;
-
+    padding-bottom: 80px;
+    line-height: 120%;  
 }
 
 .sever_features{
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
 }
 
 .features {
-    max-width: 32%;
+    width: 32%;
     display: flex;
     flex-direction: column;
     border: 1px solid #525252;
     border-radius: 15px;
-    padding: 40px;
-    
+    padding: 40px;   
 }
 
 .features span {
     /*width: 30px;*/
     font-size: 63px;
-
 }
-.ma,.partner h2{
+.features_text, .partner h2{
     font-size: 32px;
     margin: 20px 0;
     font-weight: 900;
     line-height: 120%;
 }
-.ma p{
+.features_text p{
     margin-bottom: 40px;
-    font-size: 32px;
     font-size: 16px;
     line-height: 150%;
     font-weight: 400;
 }
+
 .partner h2{
-    margin: 160px 0 80px;
+    margin: 160px 0 80px;    
+}
+
+.partner_firm {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;/*隱藏超出的文字或圖片*/
+    justify-content: center;     
+    /*background-size: cover;/*cover>背景圖不變形,寬高等,必要時局部裁切
+    background-repeat: repeat;/*圖片水平重複且會被裁切*/        
+}
+
+/*背景遮罩+漸層效果*/ 
+.partner_firm::before{
+    content: ""; 
+    width: 196px;
+    height: 40px;
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    left: 0;/*靠左*/
+    top: 0;
+
+}
+.partner_firm::after{
+    content: ""; 
+    width: 196px;
+    height: 40px;
+    background: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    right: 0;/*靠右*/
+    top: 0;   
+}
+
+.partner_firm img{
+    width: 160px;
+    height: 40px;   
+}
+.recommentul{
+    display: flex;
+    justify-content: space-between;
+    margin: 160px 0;
+}
+.comment{
+    width: 32%;
+    /*height: 400px;*/
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #191919;
+    background: #191919;
+    color: #F2F2F2;
+    border-radius: 15px;
+    padding: 40px;
+
+}
+.star{
+    display: flex;
+    margin-bottom: 22px;  
+}
+.star span{
+    font-size: 13px;
+    margin-right: 6px;
+}
+.comment_text{
+    /*max-width: 336px;*/
+    /*height: 215px;*/
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+    padding-bottom: 60px;
+    margin-bottom: auto;
+}
+.recommender{
+    display: flex;
+    align-items: center;
+    margin-top: 21px;
+
+}
+.recommender img{
+    width: 48px;
+    margin-right: 16px;
+}
+.recommender_text span{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;    
+}
+.recommender_text p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
     
 }
+
+
+
+
+
 /*.wob{
     white-space: pre-wrap
 
@@ -269,9 +300,29 @@ body {
 
 
 
+/*margin調整*/
+.mab_160 {
+    margin-bottom: 160px;
+}
 
+.mat_46 {
+    margin-top: 46px;
+}
 
+.mab_auto {
+    margin-bottom: auto;
+}
+.mal_16{
+    margin-left: 16px;
+}
+/*.mb_auto{
+    margin-bottom: auto;
+}*/   
 /*寬度調整*/
+/*.w_ml {
+    width: 422px;
+}
+
 /*.w_l {
     width: 856px;
 }*/
@@ -280,16 +331,14 @@ body {
     width: 414px;
 }*/
 
-.w_ml {
-    width: 422px;
-}
+
 /*.w {
     width: 32%;
 }*/
 
 
 /*字型調整*/
-.f_l {
+/*.f_l {
     font-size: 120px;
 }
 
@@ -299,7 +348,7 @@ body {
 
 /*.f_mm {
     font-size: 32px;
-}*/
+}
 
 .f_m {
     font-size: 20px;
@@ -307,28 +356,28 @@ body {
 
 .f_s {
     font-size: 16px;
-}
+}*/
 
 /*粗體*/
-.fwb_9 {
+/*.fwb_9 {
     font-weight: 900;
 }
 
-.fwb_7 {
+/*.fwb_7 {
     font-weight: 700;
-    /*不加px*/
+    /*不加px
 }
 
 /*.fwb_4 {
     font-weight: 400;
-}*/
+}
 
 .fwb {
     font-weight: bold;
-}
+}*/
 
 /*行距*/
-.lh_l {
+/*.lh_l {
     line-height: 160%;
 }
 
@@ -338,36 +387,42 @@ body {
 
 .lh_m {
     line-height: 120%;
-}
+}*/
 
 /*logo調整*/
-.i_w1 {
+/*.i_w1 {
     max-width: 188px;
-    /*height: 40px;*/
-}
+    /*height: 40px;
+}*/
 
 /*margin padding微調*/
-.p_20 {
+/*.p_20 {
     padding: 20px 0;
 }
 
 /*.p_40 {
     padding: 40px;
-}*/
-
-.p_010 {
-    padding: 0 10px;
 }
 
+.pa_010 {
+    padding: 0 10px;
+}
+/*
 .p_230 {
     padding: 20px 30px;
 }
-.p_b80 {
+/*.p_b80 {
     padding-bottom: 80px;
 }
 
 .p_r24 {
     padding-right: 30px;
+}
+.p_r12{
+    padding-right: 12px;
+}
+.p_l12{
+    padding-left: 12px;
 }
 
 .m_20 {
@@ -384,24 +439,16 @@ body {
 
 .m_b40 {
     margin-bottom: 40px;
-}
-.m_b160 {
-    margin-bottom: 160px;
-}
+}*/
 
-.m_t46 {
-    margin-top: 46px;
-}
 
-.ma {
-    margin-bottom: auto;
-}
+
 
 
 
 /*下底線*/
-.bd_bt {
+/*.bd_bt {
     border-bottom: 1px solid #fff;
 
-}
+}*/
 
