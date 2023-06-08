@@ -499,12 +499,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    /*white-space: nowrap;*/
+    white-space: nowrap;
 }
 @media (max-width: 767px){
     .function{
         flex-wrap: wrap;
-        /*white-space: nowrap;*/
     }
 }
 
@@ -531,17 +530,17 @@ body {
 }
 .function_menu{
     display: flex;
-    justify-content: center;
     align-items: center;
     overflow-x: auto;
-    white-space: nowrap;
+    /*justify-content: center;*/
+    /*white-space: nowrap;*/
     /*padding-right: 40px;調位置*/   
 }
 @media (max-width: 767px){
     .function_menu{
         margin: 0 auto;
         margin-top: 16px;
-        justify-content: start;
+        /*justify-content: start;*/
     }   
 }
 
