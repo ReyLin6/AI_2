@@ -47,9 +47,9 @@ table {
 	border-spacing: 0;
 }
 
-* {
+/** {
     outline: 1px solid #CE0000;
-}
+}*/
 
 *,*::before,*::after {
     box-sizing: border-box;
@@ -65,20 +65,59 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
     color: #F2F2F2;
 }
-.logo {
+@media (max-width: 768px){
+    .wrap {
+        max-width: 95%;
+    }
+}
+.header_logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
     border-bottom: 1px solid #fff;
 }
-.logo img {
-    max-width: 188px;
+@media (max-width: 768px){
+    .header_logo {
+        padding: 0;
+    }
+}
+
+.header_logo img{
+    max-width: 100%;
+    height: auto;
+}
+.logo {
+    width: 188px;
+}
+
+@media (max-width: 767px){
+    .logo{
+        padding: 28px 0;          
+    }
+}
+.navbar_btn{
+    cursor: pointer;/*指標變手指*/
+    background-color: transparent;/*背景變透明*/
+    border: 0;/*不要有外框*/
+    color: #FFFFFF;
+    display: none;/*電腦版時隱藏btn*/
+}
+.navbar_btn:hover{
+    transform: scale(1.1);
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;/*sever不要設 3個表格會不能對齊*/
+}
+@media (max-width: 767px){
+    .navbar_btn{/*顯現btn*/
+        display: block;
+    }
+    .navbar{/*隱藏首頁與定價*/
+        display: none;
+    }
 }
 .navbar li {
     margin-left: 20px;
@@ -92,9 +131,14 @@ body {
 }
 .slogan {
     font-size: 120px;
-    font-weight: bold;
+    font-weight: 900;
     line-height: 120%;
     margin: 40px 0;
+}
+@media (max-width: 767px){
+    .slogan{
+        font-size: 48px;   
+    }
 }
 .button {
     width: 160px;
@@ -111,6 +155,11 @@ body {
     font-weight: 900;
     line-height: 120%;    
 }
+@media (max-width: 767px){
+    .button{
+        margin-bottom: 180px;
+    }
+}
 .button:hover{
     background: #fff;
     color: #000;
@@ -120,12 +169,22 @@ body {
     justify-content: flex-end;
 }
 .grass img {
-    max-width: 540px;
+    width: 540px;
+}
+@media (max-width: 767px){
+    .grass img{
+        max-width: 100%;
+    }
 }
 
 /*我們的服務*/
 .container, .container_service{
     margin-bottom: 160px;
+}
+@media (max-width: 767px){
+    .container, .container_service{
+        margin-bottom: 120px;
+    }
 }
 
 .service {
@@ -134,24 +193,50 @@ body {
     align-items: flex-start;
     font-weight: 900;
 }
+@media (max-width: 767px){
+    .service{
+        flex-direction: column;
+    }
+}
 .service h2{
     width: 32%;
     /*width: 414px;*/
     font-size: 32px;
     line-height: 120%;    
-    /*flex: auto;*/
+    font-weight: 900;
 }
+@media (max-width: 767px){
+    .service h2{
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+}
+
 .service p{
     width: 66%;
     /*width: 856px;*/
     font-size: 48px;
     padding-bottom: 80px;
-    line-height: 120%;  
+    line-height: 120%;
+    font-weight: 900;  
+}
+@media (max-width: 767px){
+    .service p{
+        font-size: 32px;
+        width: 100%;
+        padding-bottom: 48px;
+    }
 }
 
 .service_features{
     display: flex;
     justify-content: space-between;    
+}
+@media (max-width: 767px){
+    .service_features{
+        flex-direction: column;
+        gap: 12px;
+    }
 }
 
 .features {
@@ -161,6 +246,12 @@ body {
     border: 1px solid #525252;
     border-radius: 15px;
     padding: 40px;   
+}
+@media (max-width: 767px){
+    .features{
+        width: 100%;
+        padding: 0 20px;/*上下,左右*/
+    }
 }
 
 .features span {
@@ -173,17 +264,31 @@ body {
     font-weight: 900;
     line-height: 120%;
 }
+@media (max-width: 767px){
+    .partner h2{
+        font-size: 20px;
+    }
+}
+
 .features_text p{
     margin-bottom: 40px;
     font-size: 16px;
     line-height: 150%;
     font-weight: 400;
+    color: #F2F2F2;
+    margin-top: 20px;
 }
 
 /*來自夥伴+廠商logo*/
 .partner h2{
-    margin-bottom:80px;    
+    margin-bottom: 80px;    
 }
+@media (max-width: 767px){
+    .partner h2{
+        margin-bottom: 24px;
+    }
+}
+
 .partner_firm {
     display: flex;
     gap: 20px;
@@ -192,6 +297,11 @@ body {
     justify-content: center;     
     /*background-size: cover;/*cover>背景圖不變形,寬高等,必要時局部裁切
     background-repeat: repeat;/*圖片水平重複且會被裁切*/        
+}
+@media (max-width: 767px){
+    .partner_firm{
+        gap: 17px;
+    }
 }
 
 /*背景遮罩+漸層效果*/ 
@@ -224,6 +334,13 @@ body {
     justify-content: space-between;
     margin: 160px 0;
 }
+@media (max-width: 767px){
+    .recommentul{
+        margin: 48px 0 156px;
+        flex-direction: column;
+    }
+}
+
 .comment{
     width: 32%;
     /*height: 400px;*/
@@ -235,6 +352,16 @@ body {
     border-radius: 15px;
     padding: 40px;
 }
+@media (max-width: 767px){
+    .comment{
+        width: 100%;
+        padding: 20px;
+    }
+    .dspnone{
+        display: none;/*讓另外兩張卡不見*/
+    }
+}
+
 .star{
     display: flex;
     margin-bottom: 22px;  
@@ -252,6 +379,12 @@ body {
     padding-bottom: 60px;
     margin-bottom: auto;
 }
+@media (max-width: 767px){
+    .comment_text{
+        padding-bottom: 0;
+    }
+}
+
 .recommender{
     display: flex;
     align-items: center;
@@ -271,17 +404,52 @@ body {
     font-weight: 400;
     line-height: 150%;   
 }
+/*設隱藏滾輪*/
+.scroll{
+    display: flex;
+    justify-content: center;
+
+}
+@media (max-width: 767px){
+    .scroll{
+        margin-top: 24px;
+    }
+    .scroll li{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;/*圓形*/
+        margin-right: 8px;
+        background: #525252;
+    }
+} 
+@media (max-width: 767px){
+    .scroll .theone{
+        background: #ffffff;
+    }
+} 
 
 /*以下網頁外框寬度為1920px 背景白的部分*/
 .container_main{
-    background: #fff;
+    background: #ffffff;
     border-radius: 160px;
     padding-top: 160px;
 }
+@media (max-width: 767px){
+    .container_main{
+        border-radius: 20px;
+        padding-top: 80px;
+    }
+}
+
 .main{
-    max-width: 1296px;/*響應式*/
+    max-width: 1296px;
     margin: 0 auto;
     font-family: 'Noto Sans TC', sans-serif;
+}
+@media (max-width: 768px){
+    .main {
+        max-width: 95%;
+    }
 }
 
 .main h2{
@@ -292,6 +460,13 @@ body {
     color: #020202;
     margin-bottom: 80px;
 }
+@media (max-width: 767px){
+    .main h2{
+        font-size: 32px;
+        margin-bottom: 32px;
+    }    
+}
+
 .search{
     background: #F2F2F2;
     border-radius: 16px;
@@ -300,6 +475,12 @@ body {
     padding: 20px 40px;
     margin-bottom: 24px;
 }
+@media (max-width: 767px){
+    .search{
+        margin-bottom: 16px;
+    }
+}
+
 .search_bar{
     width: 118px;
     font-size: 16px;
@@ -317,8 +498,16 @@ body {
 .function{
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    align-content: center;
+    /*white-space: nowrap;*/
 }
+@media (max-width: 767px){
+    .function{
+        flex-wrap: wrap;
+        /*white-space: nowrap;*/
+    }
+}
+
 .filiter{
     display: flex;
     align-items: center;
@@ -344,15 +533,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
     /*padding-right: 40px;調位置*/   
 }
-.function_menu li{
+@media (max-width: 767px){
+    .function_menu{
+        margin: 0 auto;
+        margin-top: 16px;
+        justify-content: start;
+    }   
+}
+
+.menu_item{
+    display: flex;
     font-size: 16px;
     line-height: 150%;
     font-weight: 400;
-    margin-left: 10px;   
-}
-.menu_item{
+    margin-right: 10px; 
     color: #919191;
     text-decoration: none;
     padding: 8px 16px;
@@ -379,6 +577,18 @@ body {
     border: 1px solid #F2F2F2;
     border-radius: 16px;
 }
+@media (max-width: 767px){
+    .filiter{
+        order: 1;
+    }
+    .function_menu{
+        order: 3;
+    }
+    .filiter_list{
+        order: 2;
+    }
+}
+
 .list_but{
     font-size: 16px;
     line-height: 150%;
@@ -402,6 +612,14 @@ body {
     gap: 24px;
     padding: 40px 0px;/* 250px 0;*/
 }
+@media (max-width: 767px){
+    .tools{
+        padding: 48px 0 32px;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
 .card{
     width: 32%;
     /*width: 416px;*/
@@ -412,9 +630,17 @@ body {
     display: flex;
     flex-direction: column;/*這邊要用df才能讓magin:auto出現效果*/
 }
+@media (max-width: 767px){
+    .card{
+        width: 100%;
+    }
+}
+
 .ovher{
     overflow: hidden;/*圖片外要設div才能把溢出來的圖片藏起來*/
-    max-width: 100%;/*改100%就不用調整高寬*/
+}
+.ovher img{
+    width: 100%;/*改100%就不用調整高寬*/
 }
 .ovher img:hover{
     transform: scale(1.1);
@@ -459,6 +685,12 @@ body {
     padding-bottom: 162px;
     gap: 4px;
 }
+@media (max-width: 767px){
+    .page{
+        padding-bottom: 80px;
+    }
+}
+
 .page_nb, .page_icons{/*下display flex將a標籤佔滿眶內*/
     display: flex;
     align-items: center;
@@ -490,6 +722,13 @@ body {
     color: #F2F2F2;
     padding: 80px 0 8px;
 }
+@media (max-width: 768px){
+    .container_footer {
+        max-width: 95%;
+        padding: 40px 0 8px;
+    }
+}
+
 .footer_sever{
     display: flex;
     flex-direction: column;
@@ -499,11 +738,27 @@ body {
     padding: 80px 0px;
     border-bottom: 1px solid #fff;
 }
-.footer_sever h2{  
+@media (max-width: 767px){
+    .footer_sever{
+        padding: 120px 0;
+        gap: 32px;
+        
+    }
+
+}
+.footer_sever h2{
+    color: #FFFFFF;  
     font-size: 48px;
     font-weight: 900;
     line-height: 120%;
     /*padding: 80px 0 40px;*/
+}
+@media (max-width: 767px){
+    .footer_sever h2{
+        font-size: 32px;
+        text-align: center;
+        width: 50%;
+    }
 }
 .footer_buttons{
     color: #F2F2F2;
@@ -532,6 +787,12 @@ body {
     padding: 80px 0;
     border-bottom: 1px solid #fff;
 }
+@media (max-width: 767px){
+    .footer_nav{
+        flex-direction: column-reverse;
+    }
+}
+
 .nav_item{
     display: flex;
     flex-direction: column;
@@ -543,18 +804,37 @@ body {
     text-decoration: none;
     color: #FFFFFF;
 }
+.nav_item a:hover{
+    color: #f0a76ad7;
+    /*background: #fff;*/
+}
 .footer_nav img{
     max-width: 188px;
 }
+@media (max-width: 767px){
+    .mabt_media{
+        margin-bottom: 40px;
+    }
+    .nav_item a{
+        font-size: 48px;
+    }
+}
+
 .footer{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-size: 16px;
     font-weight: 700;
     line-height: 150%;
     margin: 32px 0;
 }
+@media (max-width: 767px){
+    .footer{
+        flex-wrap: wrap;
+        /*flex-direction: column;*/
+    }
+}
+
 .community{
     display: flex;
     margin-right: auto;/*可靠左*/   
@@ -563,20 +843,35 @@ body {
     display: flex;
     margin-right: 20px;   
 }
-.community_item a, .copyright, .bktop{
+.community_item a, .copyright span, .bktop{
     color: #FFFFFF;
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
     text-decoration: none;
 }
-.copyright{
-    margin-right: 100px;
+.community a:hover{
+    color: rgb(54, 123, 227);
 }
+.bktop:hover{
+    color: rgb(247, 42, 42);
+}
+.copyright{/*修*/
+    display: flex;
+    gap: 100px;
+}
+@media (max-width: 767px){
+    .copyright{
+        flex-direction: column;
+        gap: 36px;
+    }
+}
+
 .footer .bktop .material-icons{
     font-size: 10px;
     margin-left: 14px;
 }
+
 
 /*margin調整*/
 .mat_46 {
